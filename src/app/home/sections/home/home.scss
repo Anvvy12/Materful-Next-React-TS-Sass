@@ -1,0 +1,72 @@
+.home-section {
+  background: url("../../../../../public/img/home-bg.png");
+  background-size: "contain";
+  width: 100%;
+  height: 530px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 134px 0 204px;
+}
+
+.can-container {
+  margin-top: auto;
+  background: url("../../../../../public/img/home-can-bg.png");
+  width: 1000px;
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home-section-desc-block {
+  max-width: 567px;
+  &__heading6 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    color: #888888;
+    text-transform: uppercase;
+  }
+  &__heading5 {
+    font-family: "Playfair Display";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0;
+  }
+  &__paragraph {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+    width: 90%;
+    padding-top: 11px;
+  }
+}
+@media screen and (max-width: 1425px) {
+  .home-section {
+    flex-direction: column;
+    padding-top: 55px;
+    gap: 28px;
+  }
+  .home-section-desc-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__heading5,
+    &__heading6,
+    &__paragraph {
+      text-align: center;
+    }
+  }
+  .can-container {
+    margin-top: 0;
+    width: 600px;
+    height: 300px;
+    background-size: "cover";
+  }
+}
