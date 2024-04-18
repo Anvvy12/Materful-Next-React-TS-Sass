@@ -7,14 +7,11 @@ const Header: FC = () => {
   return (
     <header className="header">
       <nav className="nav">
-        <Image src={logo} alt="logo" />
+        <Image src={logo} alt="logo" className="nav__logo" />
         <div className="nav__block">
           <span className="nav__block__text">
             We are an all-inclusive digital branding agency that specializes in
-            helping
-          </span>
-          <span className="nav__block__text">
-            purpose-driven food companies through our brand pollination™
+            helping purpose-driven food companies through our brand pollination™
             process.
           </span>
         </div>

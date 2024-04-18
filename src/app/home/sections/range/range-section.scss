@@ -1,8 +1,11 @@
 .range-article {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   padding-top: 57px;
+  gap: 17px;
   &__heading {
     font-family: "Playfair Display";
     font-weight: 700;
@@ -14,5 +17,28 @@
 
 .range-section {
   padding: 15px;
+  gap: 30px;
   display: grid;
+  width: 1200px;
+  grid-template-columns: 470px repeat(2, 70px) 470px;
+  grid-template-rows: repeat(6, 583.97px) 570px;
+}
+
+@media screen and (max-width: 1350px) {
+  .range-article {
+    padding-top: 47px;
+    &__heading {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .range-article {
+    padding-top: 37px;
+    &__heading {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
 }

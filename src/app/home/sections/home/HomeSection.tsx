@@ -16,9 +16,7 @@ const HomeSection: FC = () => {
           drink from Kuopio, Finland
         </p>
       </div>
-      <div className="can-container">
-        {/* <Image src={CanImage} alt="canImage" className="can-image" /> */}
-      </div>
+      <div className="can-container"></div>
     </section>
   );
 };
