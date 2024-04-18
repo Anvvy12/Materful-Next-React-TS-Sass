@@ -13,6 +13,11 @@ import card6 from "@/img/card6img.png";
 import card7 from "@/img/card7img.png";
 import card8 from "@/img/card8img.png";
 import card9 from "@/img/card9img.png";
+import card10 from "@/img/card10img.png";
+import card11 from "@/img/card11img.png";
+import card12 from "@/img/card12img.png";
+import Before from "@/img/before1.jpg";
+import After from "@/img/after1.png";
 import "./range-section.scss";
 
 const RangeSection: FC = () => {
@@ -38,7 +43,7 @@ const RangeSection: FC = () => {
             "Sustainably harvested from the Peruvian Amazon, Amayu is a superfruit juice packed with vitamins and antioxidants."
           }
         />
-        <div className="div3"></div>
+        <RangeCardSwipe classname="div3" after={After} before={Before} />
         <RangeCard
           img={card4}
           classname={"div4"}
@@ -78,8 +83,16 @@ const RangeSection: FC = () => {
           }
         />
         <div className="div10"></div>
-        <div className="div11"></div>
-        <div className="div12"></div>
+        <RangeCard
+          classname={"div11"}
+          img={card11}
+          assortment={"Packaging Design"}
+          heading={"Red Jacket Juice"}
+          description={
+            "Matterful redesigned several of Red Jackets core packaging products; including their premium line of Stomps as well as Joe’s Half & Half and NY-style Lemonade. Full case study coming soon."
+          }
+        />
+        <RangeCardStatic classname={"div12"} />
       </section>
     </article>
   );

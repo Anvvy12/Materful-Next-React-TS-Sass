@@ -1,16 +1,39 @@
 "use client";
 import { FC } from "react";
-import ReactCompareImage from "react-compare-image";
 import "./range-card.scss";
 import Image, { StaticImageData } from "next/image";
+import { ImgComparisonSlider } from "@img-comparison-slider/react";
 
-export const RangeCardSwipe: FC = () => {
-  const before =
-    "https://upload.wikimedia.org/wikipedia/commons/f/f5/Poster-sized_portrait_of_Barack_Obama.jpg";
-  const after =
-    "https://hindalkindi1992.files.wordpress.com/2013/11/portrait_eyes_23.jpg";
-
-  return <ReactCompareImage leftImage={before} rightImage={after} />;
+export const RangeCardSwipe: FC<{
+  classname: string;
+  after: StaticImageData;
+  before: StaticImageData;
+}> = ({ classname, before, after }) => {
+  return (
+    <div className={classname}>
+      <ImgComparisonSlider
+        style={{
+          width: 470,
+          maxHeight: 614,
+          borderRadius: "8px",
+          overflow: "hidden",
+        }}
+      >
+        <Image
+          slot="first"
+          src={before}
+          alt="before"
+          style={{ backgroundSize: "cover" }}
+        />
+        <Image
+          slot="second"
+          src={after}
+          alt="after"
+          style={{ backgroundSize: "cover" }}
+        />
+      </ImgComparisonSlider>
+    </div>
+  );
 };
 
 export const RangeCardStatic: FC<{

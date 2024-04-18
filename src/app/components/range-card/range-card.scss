@@ -1,25 +1,6 @@
-.mainWrapper {
-  // width: calc(100vw - 17px);
-  // height: calc(100vh - 17px);
-  display: grid;
-  height: 583.97px;
-  width: 470px;
-}
-
-.contentWrapper {
-  width: 100%;
-  height: 100%;
-  align-self: center;
-  justify-self: center;
-  // grid-template-columns: repeat(3, 1fr);
-  // grid-gap: 40px;
-  align-content: center;
-  justify-content: center;
-}
-
 .card {
   max-width: 670px;
-  height: 583.97px;
+  height: 100%;
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
@@ -97,4 +78,7 @@
 }
 .div12 {
   grid-area: 7 / 3 / 8 / 5;
+  background: url("../../../../public/img/card12img.png");
+  border-radius: 8px;
+  height: 651.42px;
 }
