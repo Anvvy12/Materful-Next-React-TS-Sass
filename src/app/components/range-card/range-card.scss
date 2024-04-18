@@ -4,9 +4,19 @@
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
-  &__img {
-  }
 }
+
+.card:hover .card__img {
+  transform: scale(1.15);
+  transition: transform 0.5s ease;
+  transform-origin: center;
+}
+
+.card__img {
+  transition: transform 0.5s ease;
+
+}
+
 .card-footer {
   padding: 30px 30px 50px;
   display: flex;
@@ -41,6 +51,14 @@
   }
 }
 
+.mySwiper {
+  height: 100%;
+}
+
+.swiper-slide {
+  height: 607.97px;
+}
+
 .div1 {
   grid-area: 1 / 2 / 2 / 5;
 }
@@ -72,6 +90,7 @@
 }
 .div10 {
   grid-area: 6 / 4 / 7 / 5;
+  height: 100%;
 }
 .div11 {
   grid-area: 7 / 1 / 8 / 3;

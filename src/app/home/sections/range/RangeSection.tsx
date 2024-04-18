@@ -3,6 +3,7 @@ import {
   RangeCardSwipe,
   RangeCard,
   RangeCardStatic,
+  SwiperCard,
 } from "@/app/components/range-card/RangeCard";
 import card1 from "@/img/card1img.png";
 import card2 from "@/img/card2img.png";
@@ -72,7 +73,7 @@ const RangeSection: FC = () => {
             "Matterful is proud to have worked on this innovative new line of low-sugar yogurts from Danone’s Light and Fit portfolio. Full case study coming soon!"
           }
         />
-        <div className="div8"></div>
+        <SwiperCard />
         <RangeCard
           classname={"div9"}
           img={card9}
