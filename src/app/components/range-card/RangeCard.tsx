@@ -5,6 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Navigation } from "swiper/modules";
+import { BeforeAfterSVG } from "@/img/svg/IconsSVG";
 import Avatar1 from "@/img/avatars/avatar1.jpg";
 import Avatar2 from "@/img/avatars/avatar2.jpg";
 import Avatar3 from "@/img/avatars/avatar3.jpg";
@@ -20,27 +21,41 @@ export const RangeCardSwipe: FC<{
   return (
     <div className={classname}>
       <ImgComparisonSlider
+        className="coloured-slider"
+        value={50}
         style={{
           width: 470,
           maxHeight: 614,
           borderRadius: "8px",
           overflow: "hidden",
+          outline: "none",
+       
         }}
       >
-        <Image
-          slot="first"
-          src={before}
-          alt="before"
-          style={{ backgroundSize: "contain" }}
-          loading="lazy"
-        />
-        <Image
-          slot="second"
-          src={after}
-          alt="after"
-          style={{ backgroundSize: "contain" }}
-          loading="lazy"
-        />
+        <figure slot="first" className="before">
+          <Image
+            src={before}
+            alt="before"
+            style={{ backgroundSize: "contain" }}
+            loading="lazy"
+            width={470}
+            height={583.97}
+          />
+          <figcaption>Before</figcaption>
+        </figure>
+        <figure slot="second" className="after">
+          <Image
+            src={after}
+            alt="after"
+            style={{ backgroundSize: "contain" }}
+            loading="lazy"
+            width={470}
+            height={583.97}
+          />
+          <figcaption>After</figcaption>
+        </figure>
+
+        <BeforeAfterSVG />
       </ImgComparisonSlider>
     </div>
   );
@@ -98,7 +113,7 @@ const commentsArray = [
       <p className="slide__comment">
         Matterful is more than just another design shop looking for another
         project - they REALLY care about the success of their clients. On many
-        occasions, Matterful has come through in the clutch. We surely wouldn't
+        occasions, Matterful has come through in the clutch. We surely wouldn`t
         have been able to grow at the pace we have without their hard work,
         guidance and dedication.
       </p>
@@ -113,12 +128,17 @@ const commentsArray = [
       <p className="slide__comment">
         Nice to meet you, I am a Front-end developer with 2+ years of commercial
         experience. This page was made for my portfolio, you can contact me in
-        any convenient way: Phone: +(380)95-074-41-29 Email:
-        romanbs.wo@gmail.com <a href="https://github.com/Anvvy12"> GitHub</a>,{" "}
+        any convenient way:
+        <br /> Phone: <a href="phone:+(380)95-074-41-29">
+          +(380)95-074-41-29
+        </a>{" "}
+        <br /> Email:{" "}
+        <a href="mailto:romanbs.wo@gmail.com">romanbs.wo@gmail.com</a> <br />
+        <a href="https://github.com/Anvvy12">GitHub</a>,{" "}
         <a href="https://www.linkedin.com/in/bogdan-roman-b498b924b/">
           LinkedIn
-        </a>{" "}
-        Telegram: @Anvvy,
+        </a>
+        , <a href="https://t.me/Anvvy">Telegram</a>
       </p>
     ),
   },
@@ -155,6 +175,10 @@ export const SwiperCard: FC<{ classname: string }> = ({ classname }) => {
           clickable: true,
         }}
         navigation={true}
+        // navigation={{
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // }}
         modules={[Keyboard, Navigation]}
         className="mySwiper "
         loop={true}
