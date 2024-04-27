@@ -29,7 +29,6 @@ export const RangeCardSwipe: FC<{
           borderRadius: "8px",
           overflow: "hidden",
           outline: "none",
-       
         }}
       >
         <figure slot="first" className="before">
@@ -54,8 +53,9 @@ export const RangeCardSwipe: FC<{
           />
           <figcaption>After</figcaption>
         </figure>
-
-        <BeforeAfterSVG />
+        <figure slot="handle">
+          <BeforeAfterSVG />
+        </figure>
       </ImgComparisonSlider>
     </div>
   );
