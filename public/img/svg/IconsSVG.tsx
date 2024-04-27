@@ -1,6 +1,6 @@
 export const BeforeAfterSVG = () => (
   <svg
-    slot="handle"
+ 
     width="71"
     height="71"
     viewBox="0 0 71 71"
