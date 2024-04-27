@@ -116,14 +116,24 @@
   text-transform: uppercase;
 }
 
-.before figcaption {
+.div4 > .coloured-slider > .before figcaption {
   left: 40px;
   background: #dfd0a9;
 }
 
-.after figcaption {
+.div4 > .coloured-slider > .after figcaption {
   right: 40px;
   background: #9fbdd9;
+}
+
+.div10 > .coloured-slider > .after figcaption {
+  right: 40px;
+  background: #b48c65;
+}
+
+.div10 > .coloured-slider > .before figcaption {
+  left: 40px;
+  background: #90be73;
 }
 
 .user-info {
@@ -152,6 +162,10 @@
     line-height: 22px;
     margin: 0 0 7px;
   }
+}
+
+.coloured-slider {
+  height: 100%;
 }
 
 .div1 {

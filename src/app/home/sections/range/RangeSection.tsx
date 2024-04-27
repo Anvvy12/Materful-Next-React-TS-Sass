@@ -8,18 +8,15 @@ import {
 } from "@/app/components/range-card/RangeCard";
 import card1 from "@/img/card1img.jpg";
 import card2 from "@/img/card2img.jpg";
-import card3 from "@/img/card3img.png";
 import card4 from "@/img/card4img.jpg";
-import card5 from "@/img/card5img.jpg";
 import card6 from "@/img/card6img.jpg";
 import card7 from "@/img/card7img.jpg";
-import card8 from "@/img/card8img.png";
 import card9 from "@/img/card9img.jpg";
-import card10 from "@/img/card10img.png";
 import card11 from "@/img/card11img.jpg";
-import card12 from "@/img/card12img.jpg";
-import Before from "@/img/before1.jpg";
-import After from "@/img/after1.png";
+import Before1 from "@/img/before1.jpg";
+import After1 from "@/img/after1.png";
+import Before2 from "@/img/before2.jpg";
+import After2 from "@/img/after2.jpg";
 import "./range-section.scss";
 
 const RangeSection: FC = () => {
@@ -51,7 +48,7 @@ const RangeSection: FC = () => {
             "Sustainably harvested from the Peruvian Amazon, Amayu is a superfruit juice packed with vitamins and antioxidants."
           }
         />
-        <RangeCardSwipe classname="div4" after={After} before={Before} />
+        <RangeCardSwipe classname="div4" after={After1} before={Before1} />
 
         <RangeCard
           img={card4}
@@ -90,7 +87,7 @@ const RangeSection: FC = () => {
           }
         />
 
-        <div className="div10">pack swiper</div>
+        <RangeCardSwipe classname="div10" after={After2} before={Before2} />
         <RangeCard
           classname={"div11"}
           img={card9}
