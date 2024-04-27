@@ -23,22 +23,15 @@ export const RangeCardSwipe: FC<{
       <ImgComparisonSlider
         className="coloured-slider"
         value={50}
-        style={{
-          width: 470,
-          maxHeight: 614,
-          borderRadius: "8px",
-          overflow: "hidden",
-          outline: "none",
-        }}
+
       >
         <figure slot="first" className="before">
           <Image
             src={before}
             alt="before"
-            style={{ backgroundSize: "contain" }}
+            className="before-after-img"
             loading="lazy"
             width={470}
-            height={583.97}
           />
           <figcaption>Before</figcaption>
         </figure>
@@ -46,10 +39,8 @@ export const RangeCardSwipe: FC<{
           <Image
             src={after}
             alt="after"
-            style={{ backgroundSize: "contain" }}
+            className="before-after-img"
             loading="lazy"
-            width={470}
-            height={583.97}
           />
           <figcaption>After</figcaption>
         </figure>
